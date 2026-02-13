@@ -1,0 +1,47 @@
+/* src/index.css */
+
+/* 1. Import Fonts from Google */
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+/* 2. Configure Theme */
+@theme {
+  /* Define 'font-sans' to include your new fonts stack */
+  --font-sans: "Plus Jakarta Sans", "Inter", "Hind Siliguri", sans-serif;
+
+  /* Optional: Define a specific 'font-body' if you want headings and body different */
+  --font-body: "Inter", "Hind Siliguri", sans-serif;
+
+  /* Keep your colors */
+  --color-medical-50: #f0f9ff;
+  --color-medical-100: #e0f2fe;
+  --color-medical-500: #0ea5e9;
+  --color-medical-600: #0284c7;
+  --color-medical-700: #0369a1;
+  --color-medical-900: #0c4a6e;
+  --color-healing-500: #22c55e;
+}
+
+/* 3. Global Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Apply the font globally */
+    font-family: var(--font-body);
+    @apply bg-slate-50 text-slate-800 antialiased;
+  }
+
+  /* Force Headings to use the fancy font */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+  }
+}
