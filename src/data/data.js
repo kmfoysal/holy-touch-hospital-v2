@@ -23,10 +23,6 @@ import OtRoom from "../assets/images/whyUs2.jpg";
 import Cabin from "../assets/images/whyUs5.jpg";
 import LaproscopyUnit from "../assets/images/whyUs4.jpg";
 
-
-
-
-
 export const stats = [
   { id: 1, label: "Years Experience", value: "8+", icon: Clock },
   { id: 2, label: "Expert Doctors", value: "15+", icon: User },
@@ -99,9 +95,9 @@ export const faqs = [
 // Re-exporting previous data...
 export const hospitalInfo = {
   name: "Holy Touch Hospital",
-  phone: ["+৮৮০১৭৪২-১২১২১২", "+৮৮০১৮৩৬-৯৯৯১৩৬"],
+  phone: ["01742-121212", "01836-999136"],
   email: "hth.ptk.bd@gmail.com",
-  address: "পাওয়ার হাউজ রোড, পটুয়াখালী",
+  address: "Power House Road, Patuakhali",
   openHours: "24/7 Emergency Service",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.7281300538616!2d90.33516519999999!3d22.363892099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30aac7500e25b8f9%3A0xce4888ee84232451!2sHoli%20Touch%20Hospital!5e0!3m2!1sen!2sbd!4v1771011069512!5m2!1sen!2sbd",
@@ -187,19 +183,19 @@ export const galleryImages = [
     id: 4,
     category: "Events",
     title: "Free Medical Camp 2025",
-    src: Cabin
+    src: Cabin,
   },
   {
     id: 5,
     category: "Interior",
     title: "Waiting Area",
-    src: FrontDesk
+    src: FrontDesk,
   },
   {
     id: 6,
     category: "Operation Theater",
     title: "Laparoscopy Unit",
-    src: LaproscopyUnit
+    src: LaproscopyUnit,
   },
 ];
 

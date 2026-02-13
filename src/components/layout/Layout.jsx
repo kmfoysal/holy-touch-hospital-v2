@@ -14,8 +14,8 @@ import {
 
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
-import { hospitalInfo, navLinks } from "../../data/data";
 import logo from "../../assets/images/logo-with-text.png";
+import { hospitalInfo, navLinks } from "../../data/data";
 
 // --- 1. MODERN TOP BAR ---
 const TopBar = () => (
@@ -40,7 +40,11 @@ const TopBar = () => (
           <span className="text-white font-medium">Open 24/7</span>
         </span>
         <div className="flex gap-3 border-l border-white/10 pl-6">
-          <a href="#" className="hover:text-medical-500 transition-colors">
+          <a
+            href="https://www.facebook.com/hth.ptk.bd"
+            target="_blank"
+            className="hover:text-medical-500 transition-colors"
+          >
             <Facebook size={14} />
           </a>
           <a href="#" className="hover:text-medical-500 transition-colors">
@@ -218,7 +222,10 @@ const Navbar = () => {
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Facebook size={20} />, href: "#" },
+    {
+      icon: <Facebook size={20} />,
+      href: "https://www.facebook.com/hth.ptk.bd",
+    },
     { icon: <Instagram size={20} />, href: "#" }, // You might need to import Instagram
     { icon: <Linkedin size={20} />, href: "#" }, // You might need to import Linkedin
     { icon: <Twitter size={20} />, href: "#" }, // You might need to import Twitter
@@ -259,6 +266,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href={social.href}
+                  target="_blank"
                   className="w-10 h-10 bg-white/5 hover:bg-medical-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1 text-slate-400 hover:text-white border border-white/5 hover:border-transparent"
                 >
                   {social.icon}
@@ -371,18 +379,14 @@ const Footer = () => {
             <span className="text-white font-medium">Holy Touch Hospital</span>.
             All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-slate-500">
+          <div className="text-sm text-slate-500">
+            Developed By {" "}
             <Link
-              to="/privacy"
-              className="hover:text-medical-400 transition-colors"
+              to="https://www.linkedin.com/in/kmfoysal"
+              target="_blank"
+              className="text-medical-500 transition-colors font-medium"
             >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms"
-              className="hover:text-medical-400 transition-colors"
-            >
-              Terms of Service
+              K M FOYSAL
             </Link>
           </div>
         </div>

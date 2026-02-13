@@ -9,6 +9,12 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
+import HeroImg from "../assets/images/service-img-1.jpg";
+import WhyImg1 from "../assets/images/whyUs1.jpg";
+import WhyImg2 from "../assets/images/whyUs2.jpg";
+import WhyImg3 from "../assets/images/whyUs4.jpg";
+import WhyImg4 from "../assets/images/whyUs5.jpg";
+import SEO from "../components/SEO";
 import {
   faqs,
   features,
@@ -17,11 +23,7 @@ import {
   stats,
   testimonials,
 } from "../data/data";
-import HeroImg from "../assets/images/service-img-1.jpg";
-import WhyImg1 from '../assets/images/whyUs1.jpg';
-import WhyImg2 from '../assets/images/whyUs2.jpg';
-import WhyImg3 from '../assets/images/whyUs4.jpg';
-import WhyImg4 from '../assets/images/whyUs5.jpg';
+import { seoData } from "../data/seo";
 
 // --- ANIMATION VARIANTS ---
 const fadeIn = {
@@ -79,6 +81,7 @@ const AccordionItem = ({ q, a }) => {
 const Home = () => {
   return (
     <>
+      <SEO seoData={seoData?.home} />
       {/* 1. HERO SECTION */}
       <section className="relative pt-12 pb-20 lg:pt-28 lg:pb-36 bg-medical-50 overflow-hidden">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-medical-100/60 to-transparent -z-10 rounded-bl-[200px]" />
