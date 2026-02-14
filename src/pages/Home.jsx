@@ -83,8 +83,8 @@ const Home = () => {
     <>
       <SEO seoData={seoData?.home} />
       {/* 1. HERO SECTION */}
-      <section className="relative pt-12 pb-20 lg:pt-28 lg:pb-36 bg-medical-50 overflow-hidden">
-        <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-medical-100/60 to-transparent -z-10 rounded-bl-[200px]" />
+      <section className="relative pt-12 pb-20 lg:pt-28 lg:pb-36 bg-medical-0 overflow-hidden z-0">
+        <div className="absolute top-0 right-0 w-2/3 h-full bg-linear-to-bl from-medical-500/30 to-transparent -z-10 rounded-bl-[200px]" />
 
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -129,21 +129,21 @@ const Home = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="relative hidden lg:block"
+            className="relative  lg:block"
           >
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
               <div
-                className="bg-slate-200 h-[500px] w-full flex items-center justify-center text-slate-400 bg-cover bg-center"
+                className="bg-slate-200 h-125 w-full flex items-center justify-center text-slate-400 bg-cover bg-center"
                 style={{
-                  backgroundImage: "url(/assets/images/service-img-1.jpg)",
+                  backgroundImage: `url(${HeroImg})`,
                 }}
               >
                 {/* Fallback if image missing */}
-                <img
+                {/* <img
                   src={HeroImg}
                   alt="Holy Touch Hospital Logo"
                   className="h-full w-full"
-                />
+                /> */}
               </div>
             </div>
             {/* Floating Badge with Gradient Border */}
@@ -315,7 +315,7 @@ const Home = () => {
       </section>
 
       {/* 5. EMERGENCY CTA BANNER (New) */}
-      <section className="py-16 bg-gradient-to-r from-medical-900 to-medical-800 text-white overflow-hidden relative">
+      <section className="py-16 bg-linear-to-r from-medical-900 to-medical-500 text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
           <div>

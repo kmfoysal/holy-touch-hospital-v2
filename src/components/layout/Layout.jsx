@@ -86,7 +86,7 @@ const Navbar = () => {
       <TopBar />
 
       <header
-        className={`sticky top-0 left-0 w-full z-50 transition-all duration-500 border-b border-transparent ${
+        className={`sticky top-0 left-0 w-full z-50 transition-all duration-500 border-b border-transparent overflow-x-hidden ${
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-lg py-2 border-slate-100"
             : "bg-white py-4 shadow-sm"
@@ -152,7 +152,7 @@ const Navbar = () => {
 
         {/* ---------------- MOBILE FULL SCREEN MENU ---------------- */}
         <div
-          className={`md:hidden fixed inset-0 w-full h-screen bg-white z-40 transition-all duration-500 ease-in-out ${
+          className={`md:hidden fixed inset-0 w-full h-screen bg-white z-100 transition-all duration-500 ease-in-out ${
             isOpen
               ? "opacity-100 visible translate-x-0"
               : "opacity-0 invisible translate-x-full"
@@ -380,7 +380,7 @@ const Footer = () => {
             All rights reserved.
           </p>
           <div className="text-sm text-slate-500">
-            Developed By {" "}
+            Developed By{" "}
             <Link
               to="https://www.linkedin.com/in/kmfoysal"
               target="_blank"
