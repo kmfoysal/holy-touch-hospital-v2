@@ -79,7 +79,7 @@ const PromotionalPopup = ({ imageSrc }) => {
             />
 
             {/* Optional: Call to Action Button below image */}
-            <div className="p-6 text-center">
+            {/* <div className="p-6 text-center">
               <h3 className="text-xl font-bold text-slate-900 mb-2">
                 Exclusive Hospital Services
               </h3>
@@ -92,7 +92,7 @@ const PromotionalPopup = ({ imageSrc }) => {
               >
                 View Details
               </button>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       )}

@@ -18,6 +18,10 @@ import {
 
 import Doc1 from "../assets/images/nazimul-haq.jpg";
 import Doc2 from "../assets/images/Zakia.jpg";
+import Doc3 from "../assets/images/dr-shamim.jpg";
+import Doc4 from "../assets/images/doctor-4.png";
+import Doc5 from "../assets/images/dr-moni.jpg";
+
 import FrontDesk from "../assets/images/whyUs1.jpg";
 import OtRoom from "../assets/images/whyUs2.jpg";
 import Cabin from "../assets/images/whyUs5.jpg";
@@ -141,27 +145,58 @@ export const services = [
 export const doctors = [
   {
     id: 1,
-    name: "অধ্যাপক ডাঃ জি. এম. নাজিমুল হক",
-    degrees: "এমবিবিএস, এফসিপিএস (সার্জারী), এফএমএএস (ইন্ডিয়া)",
-    specialty: "জেনারেল, ল্যাপারোস্কপিক সার্জন",
-    position: "বিভাগীয় প্রধান (সার্জারী), শেবাচিম",
+    name: "Prof. Dr. G.M. Nazimul Haque",
+    degrees: "MBBS, FCPS (Surgery), FACS (USA), FMAS (INDIA)",
+    specialty: "General, Laparoscopic & Colorectal Surgeon",
+    position: "Professor & Head, Dept. of Surgery",
+    department: "Surgery",
+    hospital: "Sher-E-Bangla Medical College & Hospital",
     image: Doc1, // Put real images in public/images/
   },
   {
     id: 2,
-    name: "ডাঃ জাকিয়া সুলতানা",
-    degrees: "এমবিবিএস, বিসিএস, এফসিপিএস (গাইনী)",
-    specialty: "গাইনী ও প্রসূতি রোগ বিশেষজ্ঞ",
-    position: "সহকারী অধ্যাপক, পটুয়াখালী মেডিকেল কলেজ",
+    name: "Dr. Zakia Sultana",
+    degrees:
+      "MBBS, BCS (Health), MRCOG (London) Part-II FCPS (Obs & Gynecology)",
+    specialty:
+      "Gynecologist, obstetrician and surgeon, Laparoscopic & Colorectal Surgeon",
+    department: "Gynae and Obstetrics",
+    position: "Associate Professor Gynae and Obstetrics",
+    hospital: "Patuakhali Medical College Hospital",
     image: Doc2,
   },
   {
     id: 3,
-    name: "ডা. মো. অহিদুজ্জামান শামীম",
-    degrees: "এমবিবিএস, বিসিএস, এফসিপিএস (স্বাস্থ্য)",
-    specialty: "শিশু বিশেষজ্ঞ",
-    position: "অধ্যাপক, পটুয়াখালী মেডিকেল কলেজ",
-    image: "/images/doctor-2.jpg",
+    name: "Dr. Md. Ahiduzzaman Shamim",
+    degrees: "MBBS BCS (Health), DCH (Dhaka Shishu Hospital)",
+    specialty: "Pediatric Specialist",
+    department: "Pediatrics",
+    position: "Associate Professor (Department of Pediatrics)",
+    hospital: "Patuakhali Medical College Hospital",
+    image: Doc3,
+  },
+  {
+    id: 4,
+    name: "Dr. Tamanna Rahman Shanta",
+    degrees: "MBBS, BCS (Health), MS (General Surgery)",
+    specialty: "General & Laparoscopic Surgeon",
+    department: "General Surgery",
+    position:
+      "Breast Tumor, Piles, Fistula, Gallstones and Hernia Disease Specialist",
+    hospital: "Patuakhali Medical College Hospital",
+    image: Doc4,
+  },
+  {
+    id: 5,
+    name: "Dr. Moni Songkor",
+    degrees:
+      "MBBS: BCS (Health), D-Ortho (Pangu Hospital) MS (Orthopedic Surgery) (Course) AO Basic; Fellow in Arthroplasty Surgery (India), Trained in Hand Surgery (Singapore)",
+    specialty: "Orthopedic Specialist and Surgeon",
+    department: "Orthopedic Surgery",
+    position: "Consultant, Orthopedic Surgery",
+    hospital:
+      "National Institute of Traumatology & Orthopaedic Rehabilitation (NITOR)",
+    image: Doc5,
   },
 ];
 

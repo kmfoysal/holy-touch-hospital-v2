@@ -10,10 +10,10 @@ import {
 import { useState } from "react";
 import { Link } from "react-router";
 import HeroImg from "../assets/images/service-img-1.jpg";
-import WhyImg1 from "../assets/images/whyUs1.jpg";
-import WhyImg2 from "../assets/images/whyUs2.jpg";
+import WhyImg1 from "../assets/images/ot-1.jpeg";
+import WhyImg2 from "../assets/images/ot.jpeg";
 import WhyImg3 from "../assets/images/whyUs4.jpg";
-import WhyImg4 from "../assets/images/whyUs5.jpg";
+import WhyImg4 from "../assets/images/ot-2.jpeg";
 import SEO from "../components/SEO";
 import {
   faqs,
@@ -24,6 +24,7 @@ import {
   testimonials,
 } from "../data/data";
 import { seoData } from "../data/seo";
+import HomeGallery from "../components/home/HomeGallery";
 
 // --- ANIMATION VARIANTS ---
 const fadeIn = {
@@ -236,7 +237,7 @@ const Home = () => {
           </motion.div>
 
           <div className="order-1 lg:order-2 relative">
-            <div className="absolute -inset-4 bg-medical-100 rounded-full blur-3xl opacity-30"></div>
+            {/* <div className="absolute -inset-4 bg-medical-100 rounded-full blur-3xl opacity-30"></div> */}
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 mt-8">
                 <div
@@ -313,6 +314,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <HomeGallery />
 
       {/* 5. EMERGENCY CTA BANNER (New) */}
       <section className="py-16 bg-linear-to-r from-medical-900 to-medical-500 text-white overflow-hidden relative">
