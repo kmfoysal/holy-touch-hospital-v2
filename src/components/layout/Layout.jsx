@@ -86,7 +86,7 @@ const Navbar = () => {
       <TopBar />
 
       <header
-        className={`sticky top-0 left-0 w-full z-50 transition-all duration-500 border-b border-transparent overflow-x-hidden ${
+        className={`sticky top-0 left-0 w-full z-50 transition-all duration-500 border-b border-transparent ${
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-lg py-2 border-slate-100"
             : "bg-white py-4 shadow-sm"
@@ -152,12 +152,12 @@ const Navbar = () => {
 
         {/* ---------------- MOBILE FULL SCREEN MENU ---------------- */}
         <div
-          className={`md:hidden fixed inset-0 w-full h-screen bg-white z-50 transition-all duration-500 ease-in-out ${
+         className={`md:hidden fixed inset-0 w-full h-screen bg-white z-40 transition-all duration-500 ease-in-out ${
             isOpen
               ? "opacity-100 visible translate-x-0"
               : "opacity-0 invisible translate-x-full"
           }`}
-          style={{ top: 0 }}
+          style={{ paddingTop: '30px' }}
         >
           {/* Background Decor */}
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-medical-50 rounded-tl-full opacity-50 -z-10"></div>
@@ -200,7 +200,7 @@ const Navbar = () => {
               </a>
               <div className="flex gap-4 justify-center">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/hth.ptk.bd"
                   className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 hover:bg-medical-600 hover:text-white transition-colors"
                 >
                   <Facebook size={20} />

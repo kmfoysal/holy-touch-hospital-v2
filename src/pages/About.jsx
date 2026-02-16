@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Award, Heart, Shield, Target } from "lucide-react";
-import DirectorImage from "../assets/images/Zakia.jpg";
+import { Award, Heart, Quote, Shield, Target } from "lucide-react";
+import ChairmanImage from "../assets/images/nazimul-haq.jpg"; // <--- Add this
+import MDImage from "../assets/images/Zakia.jpg";
 import SEO from "../components/SEO";
 import { seoData } from "../data/seo";
 
@@ -116,43 +117,100 @@ const About = () => {
           </div>
         </div>
 
-        {/* 4. Director's Message (Optional but Recommended) */}
+        {/* 4. Governing Body Message (Anonymous / Title Only) */}
         <div className="container mx-auto px-4 py-24">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="w-full md:w-1/3">
-              {/* Placeholder for Director Image */}
-              <div className="aspect-[3/4] bg-slate-200 rounded-3xl relative overflow-hidden">
-                <img
-                  src={DirectorImage}
-                  alt="Director Image"
-                  className="h-full w-full object-cover"
-                />
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+              Governing Body Message
+            </h2>
+            <div className="h-1.5 w-24 bg-medical-500 rounded-full mx-auto mb-6"></div>
+            <p className="text-slate-600 text-lg">
+              Committed to clinical excellence, ethical practice, and the
+              well-being of our community.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8">
+            {/* --- CHAIRMAN MESSAGE --- */}
+            <div className="bg-white rounded-3xl p-10 relative group hover:shadow-2xl hover:shadow-medical-500/10 transition-all duration-300 border-t-4 border-medical-500 shadow-lg">
+              {/* Decorative Quote Icon */}
+              <div className="absolute -top-6 left-10 w-12 h-12 bg-medical-500 text-white flex items-center justify-center rounded-full shadow-lg">
+                <Quote size={24} fill="currentColor" />
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                  Message from the Chairman
+                </h3>
+                <div className="w-12 h-1 bg-medical-200 rounded-full mb-6"></div>
+
+                <div className="space-y-4 text-slate-600 leading-relaxed italic">
+                  <p>
+                    "Our vision is to establish Holy Touch Hospital as a center
+                    of excellence for advanced surgery in the Barisal division.
+                    We are committed to ensuring that every patient receives the
+                    highest standard of ethical medical care without needing to
+                    travel to Dhaka."
+                  </p>
+                  <p>
+                    "We have equipped our Operation Theaters with world-class
+                    technology to ensure patient safety above all else."
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3">
+                  <div className="h-10 w-1 bg-medical-500 rounded-full"></div>
+                  <div>
+                    <p className="font-bold text-slate-900 text-sm uppercase tracking-wider">
+                      The Chairman
+                    </p>
+                    <p className="text-xs text-slate-500">
+                      Holy Touch Hospital
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="w-full md:w-2/3">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Message from the Director
-              </h2>
-              <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
-                <p>
-                  "Welcome to Holy Touch Hospital. When we started this journey,
-                  our goal was simple: to bring high-level surgical care to the
-                  doorsteps of Patuakhali so people wouldn't have to travel to
-                  Dhaka for basic operations."
-                </p>
-                <p>
-                  "Today, I am proud to say that we have successfully performed
-                  thousands of surgeries with a near-perfect success rate. Our
-                  promise to you is uncompromised quality and hygiene."
-                </p>
+
+            {/* --- MANAGING DIRECTOR MESSAGE --- */}
+            <div className="bg-white rounded-3xl p-10 relative group hover:shadow-2xl hover:shadow-healing-500/10 transition-all duration-300 border-t-4 border-healing-500 shadow-lg">
+              {/* Decorative Quote Icon */}
+              <div className="absolute -top-6 left-10 w-12 h-12 bg-healing-500 text-white flex items-center justify-center rounded-full shadow-lg">
+                <Quote size={24} fill="currentColor" />
               </div>
-              <div className="mt-8">
-                <p className="font-bold text-slate-900 text-xl">
-                  Dr. Zakia Sultana
-                </p>
-                <p className="text-medical-600">
-                  Managing Director, Holy Touch Hospital
-                </p>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                  Message from the Managing Director
+                </h3>
+                <div className="w-12 h-1 bg-healing-200 rounded-full mb-6"></div>
+
+                <div className="space-y-4 text-slate-600 leading-relaxed italic">
+                  <p>
+                    "When we started this journey, our goal was simple: to bring
+                    modern surgical and maternity care to the doorsteps of
+                    Patuakhali. We wanted to create a hospital where patients
+                    feel treated with dignity and compassion."
+                  </p>
+                  <p>
+                    "Today, I am proud that we have successfully served
+                    thousands of families. Our promise to you is uncompromised
+                    quality, hygiene, and 24/7 support."
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3">
+                  <div className="h-10 w-1 bg-healing-500 rounded-full"></div>
+                  <div>
+                    <p className="font-bold text-slate-900 text-sm uppercase tracking-wider">
+                      The Managing Director
+                    </p>
+                    <p className="text-xs text-slate-500">
+                      Holy Touch Hospital
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
