@@ -8,7 +8,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 import img1 from "../../assets/images/whyUs1.jpg"; // Interior
-import img2 from "../../assets/images/ot.jpeg";  // OT
+import img2 from "../../assets/images/ot.jpeg"; // OT
 import img3 from "../../assets/images/ot-1.jpeg"; // OT
 import img4 from "../../assets/images/ot-2.jpeg"; // OT
 import img5 from "../../assets/images/vip-cabin-1.jpeg"; // Cabin
@@ -16,86 +16,95 @@ import img6 from "../../assets/images/vvip-cabin-1.jpeg"; // Cabin
 import img7 from "../../assets/images/double-cabin-1.jpeg"; // Cabin
 import img8 from "../../assets/images/double-cabin-2.jpeg"; // Cabin
 import img9 from "../../assets/images/emg-exit.jpeg"; // Interior
-import img10 from '../../assets/images/whyUs2.jpg';        
-import img11 from '../../assets/images/whyUs5.jpg'; 
-import img12 from '../../assets/images/whyUs4.jpg';
-import img13 from '../../assets/images/whyUs6.jpg';
-
+import img10 from "../../assets/images/whyUs2.jpg";
+import img11 from "../../assets/images/whyUs5.jpg";
+import img12 from "../../assets/images/whyUs4.jpg";
+import img13 from "../../assets/images/whyUs6.jpg";
 
 const galleryImages = [
+  // COLUMN 1 START (Mix of Wide & Tall)
   {
-    src: img1,
+    src: img5, // VIP Cabin
+    category: "Luxury Accommodation",
+    title: "Premium VIP Suite",
+    height: "h-96", // Tall anchor image for Col 1
+  },
+  {
+    src: img2, // OT Entrance
+    category: "Surgical Wing",
+    title: "Sterile OT Zone",
+    height: "h-64", // Short balance
+  },
+  {
+    src: img7, // Double Cabin
+    category: "Inpatient Care",
+    title: "Standard Double Cabin",
+    height: "h-72", // Medium
+  },
+  {
+    src: img12, // Laparoscopy
+    category: "Advanced Technology",
+    title: "HD Laparoscopy Unit",
+    height: "h-64", // Short
+  },
+
+  // COLUMN 2 START (Focus on the Main Features)
+  {
+    src: img4, // OT 2
+    category: "Operation Theater",
+    title: "Modern Surgical Complex",
+    height: "h-80", // Medium-Tall
+  },
+  {
+    src: img1, // Interior
+    category: "Patient Comfort",
+    title: "Spacious Waiting Lounge",
+    height: "h-64", // Short
+  },
+  {
+    src: img13, // Anesthesia
+    category: "Critical Care",
+    title: "Digital Anesthesia Workstation",
+    height: "h-96", // Tall feature
+  },
+  {
+    src: img9, // Emergency
+    category: "Safety",
+    title: "Emergency Exit Route",
+    height: "h-64", // Short
+  },
+
+  // COLUMN 3 START (Visual Balance)
+  {
+    src: img3, // OT 1
+    category: "Operation Theater",
+    title: "Advanced OT Setup",
+    height: "h-72", // Medium
+  },
+  {
+    src: img6, // VVIP Cabin
+    category: "Luxury Accommodation",
+    title: "Executive VVIP Cabin",
+    height: "h-80", // Medium-Tall
+  },
+  {
+    src: img11, // Corridor
     category: "Interior",
-    title: "Spacious Waiting Area",
-    height: "h-64",
+    title: "Hygienic Hospital Corridor",
+    height: "h-64", // Short
   },
   {
-    src: img2,
-    category: "Operation Theater",
-    title: "Operation Theater Enterence",
-    height: "h-72",
+    src: img8, // Double Cabin 2
+    category: "Inpatient Care",
+    title: "Patient Recovery Room",
+    height: "h-72", // Medium
   },
-  {
-    src: img3,
-    category: "Operation Theater",
-    title: "Advanced OT Complex",
-    height: "h-80",
-  },
-    {
-    src: img4,
-    category: "Operation Theater",
-    title: "Advanced OT Complex",
-    height: "h-96",
-  },
-  {
-    src: img5,
-    category: "Cabin",
-    title: "VIP Cabin",
-    height: "h-96",
-  },
-  {
-    src: img6,
-    category: "Cabin",
-    title: "VVIP Cabin",
-    height: "h-80",
-  },
-  {
-    src: img7,
-    category: "Cabin",
-    title: "Double Cabin",
-    height: "h-72",
-  },
-  { src: img8, category: "Cabin", title: "Double Cabin", height: "h-64" },
-  {
-    src: img9,
-    category: "Interior",
-    title: "Emergency Exit",
-    height: "h-64",
-  },
-    {
-    src: img10,
-    category: "Operation Theater",
-    title: "Operation Theater",
-    height: "h-64",
-  },
-  {
-    src: img11,
-    category: "Interior",
-    title: "Spacious Corridor",
-    height: "h-72",
-  },
-  {
-    src: img12,
-    category: "Equipment",
-    title: "Modern Laparoscopy Machine",
-    height: "h-80",
-  },
-  {
-    src: img13,
-    category: "Equipment",
-    title: "Modern Anesthesia Machine",
-    height: "h-96",
-  },
+//   {
+//     src: img10, // OT 3 (WhyUs2)
+//     category: "Surgical Wing",
+//     title: "Dedicated OT Staff",
+//     height: "h-64", // Short
+//   },
 ];
 
 const HomeGallery = () => {

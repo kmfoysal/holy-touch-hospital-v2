@@ -152,7 +152,7 @@ const Navbar = () => {
 
         {/* ---------------- MOBILE FULL SCREEN MENU ---------------- */}
         <div
-          className={`md:hidden fixed inset-0 w-full h-screen bg-white z-100 transition-all duration-500 ease-in-out ${
+          className={`md:hidden fixed inset-0 w-full h-screen bg-white z-50 transition-all duration-500 ease-in-out ${
             isOpen
               ? "opacity-100 visible translate-x-0"
               : "opacity-0 invisible translate-x-full"
