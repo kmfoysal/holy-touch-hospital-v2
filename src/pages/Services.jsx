@@ -3,10 +3,10 @@ import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router";
 import { hospitalFacilities, hospitalInfo } from "../data/data";
 
-import WhyImg2 from "../assets/images/whyUs2.jpg";
+import WhyImg1 from "../assets/images/ot-1.jpeg";
+import WhyImg2 from "../assets/images/ot.jpeg";
 import WhyImg3 from "../assets/images/whyUs4.jpg";
-import WhyImg4 from "../assets/images/whyUs5.jpg";
-import WhyImg1 from "../assets/images/whyUs6.jpg";
+import WhyImg4 from "../assets/images/ot-2.jpeg";
 import { seoData } from "../data/seo";
 import SEO from "../components/SEO";
 
@@ -97,7 +97,7 @@ const Services = () => {
 
               {/* Right: The Image */}
               <div className="order-1 lg:order-2 relative">
-                <div className="absolute -inset-4 bg-medical-100 rounded-full blur-3xl opacity-30"></div>
+                {/* <div className="absolute -inset-4 bg-medical-100 rounded-full blur-3xl opacity-30"></div> */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4 mt-8">
                     <div
@@ -125,46 +125,70 @@ const Services = () => {
           </div>
         </section>
 
-        {/* 3. The Full 9-Point List */}
-        <div className="container mx-auto px-4 py-24">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Comprehensive Facilities
-            </h2>
-            <p className="text-slate-600 text-lg">
-              A detailed look at what we offer to our patients.
-            </p>
+        {/* 3. The Full 12-Point List */}
+        <div className="relative pb-24 bg-slate-50 overflow-hidden">
+          {/* Background Pattern for "Modern" feel */}
+          <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+            <div className="absolute right-0 top-0 w-96 h-96 bg-medical-200 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute left-0 bottom-0 w-96 h-96 bg-healing-200 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {hospitalFacilities.map((item, i) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                className="p-8 rounded-3xl bg-white border border-slate-100 hover:border-medical-300 hover:shadow-xl hover:-translate-y-1 transition-all group h-full flex flex-col"
-              >
-                <div className="w-14 h-14 bg-medical-50 rounded-2xl flex items-center justify-center text-medical-600 mb-6 group-hover:bg-medical-600 group-hover:text-white transition-colors">
-                  <item.icon size={28} />
-                </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-16 max-w-3xl mx-auto">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-white border border-medical-100 text-medical-600 font-bold text-sm mb-4 shadow-sm">
+                World-Class Amenities
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                Comprehensive{" "}
+                <span className="text-medical-600">Facilities</span>
+              </h2>
+              <p className="text-slate-600 text-lg">
+                We have equipped our hospital with modern technology and
+                patient-centric amenities to ensure the best care possible.
+              </p>
+            </div>
 
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {item.title}
-                </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
+              {hospitalFacilities.map((item, i) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="group relative bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-medical-500/10 hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+                >
+                  {/* Top Gradient Line on Hover */}
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-medical-500 to-healing-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
-                <p className="text-slate-600 leading-relaxed mb-4 flex-grow">
-                  {item.desc}
-                </p>
+                  {/* Icon with Gradient Glow */}
+                  <div className="relative w-16 h-16 mb-6">
+                    <div className="absolute inset-0 bg-medical-500 rounded-2xl rotate-6 opacity-0 group-hover:opacity-10 group-hover:rotate-12 transition-all duration-300"></div>
+                    <div className="relative w-full h-full bg-medical-50 rounded-2xl flex items-center justify-center text-medical-600 group-hover:bg-medical-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                      <item.icon size={32} strokeWidth={1.5} />
+                    </div>
+                  </div>
 
-                {/* Bangla Translation - Excellent for Local Trust */}
-                <div className="pt-4 border-t border-slate-50">
-                  <p className="text-sm text-slate-400 font-medium font-['Hind_Siliguri']">
-                    {item.original}
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-medical-700 transition-colors">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    {item.desc}
                   </p>
-                </div>
-              </motion.div>
-            ))}
+
+                  {/* Bangla Translation Box */}
+                  <div className="mt-auto pt-4 border-t border-slate-100">
+                    <div className="flex items-start gap-2">
+                      <div className="w-1 h-full min-h-[24px] bg-healing-500 rounded-full opacity-50"></div>
+                      <p className="text-sm text-slate-500 font-medium font-['Hind_Siliguri'] leading-relaxed">
+                        {item.original}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 

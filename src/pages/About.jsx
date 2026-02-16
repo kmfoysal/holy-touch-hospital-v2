@@ -13,7 +13,10 @@ const About = () => {
       <div className="bg-white min-h-screen">
         {/* 1. Page Header */}
         <div className="bg-medical-50 py-20 lg:py-28 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/dot-bg.png')] opacity-10"></div>
+          {/* Abstract Shapes */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-medical-500 rounded-full blur-3xl opacity-30 -translate-y-1/2 translate-x-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-healing-500 rounded-full blur-3xl opacity-30 translate-y-1/3 -translate-x-1/3"></div>
+
           <div className="container mx-auto px-4 relative z-10 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
