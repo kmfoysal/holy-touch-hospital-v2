@@ -21,7 +21,7 @@ import { hospitalInfo, navLinks } from "../../data/data";
 const TopBar = () => (
   <div className="relative bg-slate-900 text-slate-300 text-sm hidden md:block z-[60]">
     {/* Gradient Line */}
-    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-medical-500 via-healing-500 to-medical-600"></div>
+    <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-medical-500 via-healing-500 to-medical-600"></div>
 
     <div className="container mx-auto px-4 py-2.5 flex justify-between items-center mt-1">
       <div className="flex gap-6">
@@ -99,7 +99,7 @@ const Navbar = () => {
             className="flex items-center gap-2 group"
             onClick={() => setIsOpen(false)}
           >
-            <div className="w-30">
+            <div className="w-32">
               <img
                 src={logo}
                 alt="Holy Touch Hospital Logo"
@@ -152,12 +152,10 @@ const Navbar = () => {
 
         {/* ---------------- MOBILE FULL SCREEN MENU ---------------- */}
         <div
-         className={`md:hidden fixed inset-0 w-full h-screen bg-white z-40 transition-all duration-500 ease-in-out ${
-            isOpen
-              ? "opacity-100 visible translate-x-0"
-              : "opacity-0 invisible translate-x-full"
+          className={`md:hidden fixed top-0 right-0 h-screen bg-white z-40 transition-all duration-500 ease-in-out overflow-hidden ${
+            isOpen ? "w-full opacity-100 visible" : "w-0 opacity-0 invisible"
           }`}
-          style={{ paddingTop: '30px' }}
+          style={{ paddingTop: "30px" }}
         >
           {/* Background Decor */}
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-medical-50 rounded-tl-full opacity-50 -z-10"></div>
